@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Žitný chleba — časovač pečení</title>
+  <title>Janiny kváskový chlebík</title>
   <style>
     :root {
       --flour: #F6EFE1;
@@ -789,7 +789,7 @@
     <div class="hero">
       <button class="speaker" id="speakerBtn" aria-pressed="false" aria-label="Zvuk připomínek"></button>
       <div id="heroArt"></div>
-      <div class="app-title">Žitný chleba na kvásku</div>
+      <div class="app-title">Janiny kváskový chlebík</div>
       <p class="app-sub">Odškrtávej hotové kroky, hlídej odpočty a piš si, jak ti těsto šlo.</p>
     </div>
 
@@ -837,8 +837,10 @@
 
     <div id="timeline"></div>
 
-    <p class="footer-note">Odkaz na plán si v sobě nese časy, posuvník i poznámky — pošli si ho na druhý
-      telefon.<br>Zvuk se ozve, jen když máš stránku otevřenou.</p>
+    <p class="footer-note">Odkaz na plán si v sobě nese časy, posuvník i poznámky — pošli si ho nebo sdílej
+      spolupekařům.
+      <br>Zvuk se ozve, jen když máš stránku otevřenou
+    </p>
   </div>
 
   <canvas id="confetti"></canvas>
@@ -1008,6 +1010,15 @@
     }
     function save() {
       try { localStorage.setItem(SAVE_KEY, JSON.stringify({ ...stateObj(), s: soundEnabled })); } catch (e) { }
+      updateHash();
+    }
+    function updateHash() {
+      try {
+        const clean = { ...stateObj() };
+        if (!Object.keys(clean.n).length) delete clean.n;
+        const encoded = 'p=' + b64urlEncode(JSON.stringify(clean));
+        if (location.hash.slice(1) !== encoded) history.replaceState(null, '', '#' + encoded);
+      } catch (e) { }
     }
     function applyState(s) {
       if (typeof s.t === 'number') startTime = new Date(s.t);
