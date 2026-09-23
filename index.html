@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Janiny kváskový chlebík</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2214%22%20fill%3D%22%23F6EFE1%22/%3E%3Cpath%20d%3D%22M9%2041c-1.4-4.4-2-8.6-2-13C7%2015%2018%206%2032%206s25%209%2025%2022c0%204.4-.6%208.6-2%2013z%22%20fill%3D%22%239C3B26%22/%3E%3Cpath%20d%3D%22M9%2041h46c0%203.6-2.6%206-7%206H16c-4.4%200-7-2.4-7-6z%22%20fill%3D%22%237A2C1C%22/%3E%3Cg%20stroke%3D%22%23F6EFE1%22%20stroke-width%3D%223.2%22%20stroke-linecap%3D%22round%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M21%2030c2-6%204.5-10%207-13%22/%3E%3Cpath%20d%3D%22M31%2032c2-7%204.5-11.5%208-15%22/%3E%3Cpath%20d%3D%22M42%2030c1.6-6%203.6-10%205.6-13%22/%3E%3C/g%3E%3C/svg%3E">
   <style>
     :root {
       --flour: #F6EFE1;
@@ -839,7 +840,7 @@
 
     <p class="footer-note">Odkaz na plán si v sobě nese časy, posuvník i poznámky — pošli si ho nebo sdílej
       spolupekařům.
-      <br>Zvuk se ozve, jen když máš stránku otevřenou
+      <br>Zvuk se ozve, jen když máš stránku otevřenou.
     </p>
   </div>
 
@@ -915,13 +916,12 @@
       },
       {
         id: 2, offset: 480, icon: 'bowl', title: "Autolýza (namočení mouky)",
-        desc: "Smíchej 350 g hladké mouky, 150 g celozrnné pšeničné a 340 g vody. Nech 1 hodinu odpočívat.",
-        timers: [{ label: "Odpočinek 60 min", min: 60 }]
+        desc: "Smíchej 350 g hladké mouky, 150 g celozrnné pšeničné a 340 g vody. Nech 1 hodinu odpočívat."
       },
       {
         id: 3, offset: 540, icon: 'mixer', title: "Vmíchání rozkvasu",
         desc: "Přidej 90 g hotového rozkvasu a hněť v robotu na nejnižší rychlost 8 minut. Přiklop a nech 20 minut odpočívat.",
-        timers: [{ label: "Hnětení 8 min", min: 8 }, { label: "Odpočinek 20 min", min: 20 }]
+        timers: [{ label: "Hnětení 8 min", min: 8 }]
       },
       {
         id: 4, offset: 568, icon: 'salt', title: "Solení a kmínování",
@@ -930,11 +930,11 @@
       },
       {
         id: 5, offset: 615, icon: 'fold', title: "1. překládání těsta",
-        desc: "Namoč si ruce, podeber těsto a přehni.", timers: [{ label: "Do dalšího přeložení 35 min", min: 35 }]
+        desc: "Namoč si ruce, podeber těsto a přehni."
       },
       {
         id: 6, offset: 650, icon: 'fold', title: "2. překládání těsta",
-        desc: "Stejný postup jako u prvního překládání.", timers: [{ label: "Do dalšího přeložení 35 min", min: 35 }]
+        desc: "Stejný postup jako u prvního překládání."
       },
       {
         id: 7, offset: 685, icon: 'fold', title: "3. překládání těsta",
@@ -950,8 +950,7 @@
       },
       {
         id: 10, fridgeRel: -45, icon: 'oven', title: "Rozpalování trouby",
-        desc: "Vlož litinový hrnec do trouby a rozpal na 250 °C. Nech se pořádně rozehřát (cca 30–45 minut).",
-        timers: [{ label: "Rozpalování 45 min", min: 45 }]
+        desc: "Vlož litinový hrnec do trouby a rozpal na 250 °C. Nech se pořádně rozehřát (cca 30–45 minut)."
       },
       {
         id: 11, fridgeRel: 0, icon: 'scoring', title: "Vyndání z lednice a 1. fáze pečení",
@@ -973,18 +972,18 @@
 
     const INGREDIENTS = [
       {
-        group: "Na rozkvas", items: [
+        group: "Na rozkvas (1. den, večer)", items: [
           "45 g žitné mouky",
           "45 g vody",
           "1 lžíce aktivního kvásku",
         ]
       },
       {
-        group: "Na těsto", items: [
+        group: "Na těsto (2. den)", items: [
           "350 g hladké mouky",
           "150 g celozrnné pšeničné mouky",
           "340 g vody",
-          "90 g hotového rozkvasu",
+          "90 g hotového rozkvasu (z předchozího dne)",
           "10 g soli",
           "15 g kmínu",
         ]
